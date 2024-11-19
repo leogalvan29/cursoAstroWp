@@ -12,14 +12,14 @@ export async function getStaticPaths(){
         }
       })
       const data = await  datos.json()
-      return data.map((post) =>  {
+      return data.map((post) =>  ({
           params:{
               id:post.id
           },
           props:{
              post 
           }
-      })
+      })) 
 }
 
 console.log(Astro.params) 
@@ -54,7 +54,7 @@ const {title , content , featured_image_url} = Astro.props.post
             <h2 class="text-pretty text-3xl font-semibold tracking-tight text-gray-900">{title.rendered}</h2>
             <p class="mt-6">{content.rendered}</p>
            
-          </div>
+          </div>   
         </div>
       </div>
       

@@ -17,7 +17,7 @@ const response = await fetch('https://programadorculiacan.com/wp-json/wp/v2/land
 		'Content-Type':'application/json'
 	}
 })  
-const data = await response.json()   
+const data = await response.json()    
 //console.log(data[0].acf)
 
 const {texto_top_cta, titulo_1 , imagen_1 ,description_1 ,cta_1 ,link_cta_1 , cta_2, link_cta_2 , titulo_beneficios , titulo_2_beneficios ,descripcion_beneficios}  = data[0].acf
