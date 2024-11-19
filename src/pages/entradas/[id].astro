@@ -12,14 +12,14 @@ export async function getStaticPaths(){
         }
       })
       const data = await  datos.json()
-      return data.map((post) => ( {
+      return data.map((post) =>  {
           params:{
               id:post.id
           },
           props:{
              post 
           }
-      }))
+      })
 }
 
 console.log(Astro.params) 
